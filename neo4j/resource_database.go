@@ -66,6 +66,10 @@ func resourceDatabaseRead(ctx context.Context, d *schema.ResourceData, m interfa
 	defer session.Close()
 	result, err := neo4j.Single(session.Run("SHOW DATABASE $database YIELD name LIMIT 1", map[string]interface{}{"database": d.Id()}))
 	if err != nil {
+		if err.Error() == "Result contains no more records" {
+			d.SetId("")
+			return diags
+		}
 		return diag.FromErr(err)
 	}
 	name, _ := result.Get("name")
