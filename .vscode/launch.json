@@ -10,83 +10,59 @@
       "request": "launch",
       "mode": "test",
       "program": "${workspaceRoot}/neo4j/data_source_database_test.go",
-      "args": [
-          "-test.v",
-          "-test.run",
-          "TestDatabases"
-      ],
+      "args": ["-test.v", "-test.run", "TestDatabases"],
       "envFile": "${workspaceRoot}/.vscode/private.env",
       "showLog": true
-  },
-  {
-    "name": "resource_database_test",
-    "type": "go",
-    "request": "launch",
-    "mode": "test",
-    "program": "${workspaceRoot}/neo4j/resource_database_test.go",
-    "args": [
-        "-test.v",
-        "-test.run",
-        "TestResourceDatabase"
-    ],
-    "envFile": "${workspaceRoot}/.vscode/private.env",
-    "showLog": true
-},
-{
-  "name": "resource_user_test",
-  "type": "go",
-  "request": "launch",
-  "mode": "test",
-  "program": "${workspaceRoot}/neo4j/resource_user_test.go",
-  "args": [
-      "-test.v",
-      "-test.run",
-      "TestResourceUser"
-  ],
-  "envFile": "${workspaceRoot}/.vscode/private.env",
-  "showLog": true
-},
-{
-  "name": "resource_role_test",
-  "type": "go",
-  "request": "launch",
-  "mode": "test",
-  "program": "${workspaceRoot}/neo4j/resource_role_test.go",
-  "args": [
-      "-test.v",
-      "-test.run",
-      "TestResourceRole"
-  ],
-  "envFile": "${workspaceRoot}/.vscode/private.env",
-  "showLog": true
-},
-{
-  "name": "resource_grant_test",
-  "type": "go",
-  "request": "launch",
-  "mode": "test",
-  "program": "${workspaceRoot}/neo4j/resource_grant_test.go",
-  "args": [
-      "-test.v",
-      "-test.run",
-      "TestResourceGrant"
-  ],
-  "envFile": "${workspaceRoot}/.vscode/private.env",
-  "showLog": true
-},
-{
-  "name": "resource_grant_test_import",
-  "type": "go",
-  "request": "launch",
-  "mode": "test",
-  "program": "${workspaceRoot}/neo4j/resource_grant_test.go",
-  "args": [
-      "-test.v",
-      "-test.run",
-      "TestImportResourceGrant"
-  ],
-  "envFile": "${workspaceRoot}/.vscode/private.env",
-  "showLog": true
-}
+    },
+    {
+      "name": "resource_database_test",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceRoot}/neo4j/resource_database_test.go",
+      "args": ["-test.v", "-test.run", "TestResourceDatabase"],
+      "envFile": "${workspaceRoot}/.vscode/private.env",
+      "showLog": true
+    },
+    {
+      "name": "resource_user_test",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceRoot}/neo4j/resource_user_test.go",
+      "args": ["-test.v", "-test.run", "TestResourceUser"],
+      "envFile": "${workspaceRoot}/.vscode/private.env",
+      "showLog": true
+    },
+    {
+      "name": "resource_role_test",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceRoot}/neo4j/resource_role_test.go",
+      "args": ["-test.v", "-test.run", "TestResourceRole"],
+      "envFile": "${workspaceRoot}/.vscode/private.env",
+      "showLog": true
+    },
+    {
+      "name": "resource_grant_test",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceRoot}/neo4j/resource_grant_test.go",
+      "args": ["-test.v", "-test.run", "TestResourceGrant"],
+      "envFile": "${workspaceRoot}/.vscode/private.env",
+      "showLog": true
+    },
+    {
+      "name": "resource_grant_test_import",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceRoot}/neo4j/resource_grant_test.go",
+      "args": ["-test.v", "-test.run", "TestImportResourceGrant"],
+      "envFile": "${workspaceRoot}/.vscode/private.env",
+      "showLog": true
+    }
   ]
 }
