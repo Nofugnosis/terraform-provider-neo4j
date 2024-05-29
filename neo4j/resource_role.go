@@ -62,6 +62,10 @@ func resourceRoleRead(ctx context.Context, d *schema.ResourceData, m interface{}
 	defer session.Close()
 	result, err := neo4j.Single(session.Run("SHOW ROLES WHERE role = $role", map[string]interface{}{"role": d.Id()}))
 	if err != nil {
+		if err.Error() == "Result contains no more records" {
+			d.SetId("")
+			return diags
+		}
 		return diag.FromErr(err)
 	}
 	name, _ := result.Get("role")

@@ -96,6 +96,10 @@ func resourceUserRead(ctx context.Context, d *schema.ResourceData, m interface{}
 	defer session.Close()
 	result, err := neo4j.Single(session.Run("SHOW USERS YIELD user WHERE user = $username", map[string]interface{}{"username": d.Id()}))
 	if err != nil {
+		if err.Error() == "Result contains no more records" {
+			d.SetId("")
+			return diags
+		}
 		return diag.FromErr(err)
 	}
 	name, _ := result.Get("user")
