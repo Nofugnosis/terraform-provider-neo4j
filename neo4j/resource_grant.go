@@ -135,7 +135,7 @@ func buildQuery(rawAction string, rawResource string, rawGraph string, rawSegmen
 		toFrom = "FROM"
 	}
 
-	return fmt.Sprintf("GRANT %s %sON %s %s %s%s `%s`", action, resource, grantType, graph, segment, toFrom, role), nil
+	return fmt.Sprintf("GRANT %s %s ON %s %s %s%s `%s`", action, resource, grantType, graph, segment, toFrom, role), nil
 
 }
 
